@@ -11,3 +11,13 @@ With 19,458 tweets as the training data that were manually tagged,
 the machine learning model was able to achieve an accuracy of 82.12\%, precision of 82.11\%, recall of 82.13\%, and F1 of 81.97\%, 
 well within the 70\%-90\% range of acceptable industry standards. The application is able to display the most common sentiment for each topic, 
 with a graph that shows the date the tweet was posted and the confidence of the model of the predicted sentiment of a specific tweet.
+
+Libraries required:
+twint
+pandas
+numpy
+nltk
+sklearn
+streamlit
+
+Use pip install
