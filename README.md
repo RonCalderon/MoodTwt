@@ -21,3 +21,4 @@ sklearn
 streamlit
 
 Use pip install
+run using "streamlit run search_twitter.py"
