@@ -271,7 +271,8 @@ if topic is not None:
     df = predict_topic(topic,False,False,no_tweets)
     st.header("Sentiments for : " + topic)
     st.subheader("Most common sentiment : "+ df.mode()["pred_sentiment"][0])
-    #st.bar_chart((df['pred_sentiment'].value_counts()/df['pred_sentiment'].count())*100)
+    percentages = (df['pred_sentiment'].value_counts()/df['pred_sentiment'].count())*100
+    st.bar_chart(percentages)
     
     df["date"] = pd.to_datetime(df["date"])
     #x[0] negative x[1] neutral x[2] positive
