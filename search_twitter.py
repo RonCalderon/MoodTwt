@@ -267,35 +267,38 @@ st.sidebar.header('User Input Features')
 # Collects user input features into dataframe
 topic = st.sidebar.text_input("Enter the topic of interest:", "Good Night")
 no_tweets = st.sidebar.slider('Number of Tweets:', 100,500,250)
-if topic is not None:
-    df = predict_topic(topic,False,False,no_tweets)
-    st.header("Sentiments for : " + topic)
-    st.subheader("Most common sentiment : "+ df.mode()["pred_sentiment"][0])
-    percentages = (df['pred_sentiment'].value_counts()/df['pred_sentiment'].count())*100
-    st.bar_chart(percentages)
-    
-    df["date"] = pd.to_datetime(df["date"])
-    #x[0] negative x[1] neutral x[2] positive
-    #confidence if positive, -confidence if negative, 1-confidence if neutral positive, -1+confidence if neutral negative
-    df['position'] = df.confidencefull.apply(lambda x: -x[0] if x[0]>x[1] and x[0]>x[2] else (x[2] if x[2]>x[1] and x[2]>x[0] else (1-x[1] if x[2]>x[0] else -1+x[1])))
-    area = df['confidence']
-   
-    import plotly.express as px  
+try:
+    if topic is not None:
+        df = predict_topic(topic,False,False,no_tweets)
+        st.header("Sentiments for : " + topic)
+        st.subheader("Most common sentiment : "+ df.mode()["pred_sentiment"][0])
+        percentages = (df['pred_sentiment'].value_counts()/df['pred_sentiment'].count())*100
+        st.bar_chart(percentages)
+        
+        df["date"] = pd.to_datetime(df["date"])
+        #x[0] negative x[1] neutral x[2] positive
+        #confidence if positive, -confidence if negative, 1-confidence if neutral positive, -1+confidence if neutral negative
+        df['position'] = df.confidencefull.apply(lambda x: -x[0] if x[0]>x[1] and x[0]>x[2] else (x[2] if x[2]>x[1] and x[2]>x[0] else (1-x[1] if x[2]>x[0] else -1+x[1])))
+        area = df['confidence']
+       
+        import plotly.express as px  
 
-    plot = px.scatter(df, x="date", y="position",size=area,size_max=10,hover_data=['tweet'],color="pred_sentiment",
-                      labels={
-                     "date": "Date of Tweet",
-                     "position": "Sentiment Confidence",
-                     "pred_sentiment": "Predicted Sentiment",
-                     "confidence":"Confidence",
-                     "tweet":"Tweet"},
-                     color_discrete_sequence = ['yellow', 'gray', 'blue'],
-                     category_orders={"pred_sentiment": ["positive", "neutral", "negative"]})
-    st.header('Sentiments over time')
-    st.plotly_chart(plot, use_container_width=True)
-    
-    # st.pyplot(fig)  
-    
-    st.header('Tweets')
-    
-    st.table(df[['date','tweet','pred_sentiment','confidence']])
+        plot = px.scatter(df, x="date", y="position",size=area,size_max=10,hover_data=['tweet'],color="pred_sentiment",
+                          labels={
+                         "date": "Date of Tweet",
+                         "position": "Sentiment Confidence",
+                         "pred_sentiment": "Predicted Sentiment",
+                         "confidence":"Confidence",
+                         "tweet":"Tweet"},
+                         color_discrete_sequence = ['yellow', 'gray', 'blue'],
+                         category_orders={"pred_sentiment": ["positive", "neutral", "negative"]})
+        st.header('Sentiments over time')
+        st.plotly_chart(plot, use_container_width=True)
+        
+        # st.pyplot(fig)  
+        
+        st.header('Tweets')
+        
+        st.table(df[['date','tweet','pred_sentiment','confidence']])
+except:
+    st.write("No Tweets gathered.")
