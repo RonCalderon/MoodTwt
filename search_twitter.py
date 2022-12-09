@@ -117,7 +117,7 @@ def create_stopwords():
     for x in tl:
         tl_stopwords.append(x)
 
-    new_stopwords=set(stopwords.words("english")+tl_stopwords)
+    new_stopwords=list(stopwords.words("english")+tl_stopwords)
     return new_stopwords
     
 def print_top10(vectorizer, model, class_labels):
