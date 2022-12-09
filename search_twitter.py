@@ -24,7 +24,7 @@ def scrape_tweet(word,filename,save_bool,limit):
         # c.Until = sys.argv[4]
 
     c.Search = word
-    c.Near = "Philippines"
+    c.Near = "Manila"
     c.Limit = limit
     c.Pandas = True
     c.Lang = "tl"
@@ -261,7 +261,7 @@ st.write("Current accuracy is : " + "{0:.0%}".format(lr_score))
   # </style>
 # """, unsafe_allow_html=True)
 
-st.sidebar.image("logo.png", width=200)
+st.sidebar.image("logo.png", use_column_width=True)
 st.sidebar.header('User Input Features')
 
 # Collects user input features into dataframe
