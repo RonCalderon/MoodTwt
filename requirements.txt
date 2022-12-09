@@ -3,13 +3,4 @@ pandas
 numpy
 nltk
 sklearn
-streamlit
-nltk.corpus
-nltk.tokenize
-sklearn.model_selection
-sklearn.feature_extraction.text
-nltk.tokenize
-sklearn.linear_model
-sklearn.metrics
-matplotlib.pyplot
-matplotlib.dates
+matplotlib
