@@ -1,8 +1,5 @@
-sys
 twint
-io
 pandas
-redirect_stdout
 re
 string
 numpy
