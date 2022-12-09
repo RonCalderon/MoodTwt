@@ -2,7 +2,6 @@ twint
 pandas
 numpy
 nltk
-pickle
 sklearn
 streamlit
 nltk.corpus
