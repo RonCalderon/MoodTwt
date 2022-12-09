@@ -1,7 +1,5 @@
 twint
 pandas
-re
-string
 numpy
 nltk
 pickle
