@@ -6,6 +6,7 @@ import re,string
 import pandas as pd
 import numpy as np
 import nltk
+nltk.download('stopwords')
 import pickle
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
