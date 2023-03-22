@@ -10,6 +10,8 @@ import pickle
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 
+nltk.download('stopwords')
+
 def scrape_tweet(word,filename,save_bool,limit):
     # Config twint
     c = twint.Config()
