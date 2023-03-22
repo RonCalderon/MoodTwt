@@ -26,10 +26,10 @@ def scrape_tweet(word,filename,save_bool,limit):
         # c.Until = sys.argv[4]
 
     c.Search = word
-    c.Near = "Manila"
+    c.Near = "Philippines"
     c.Limit = limit
     c.Pandas = True
-    c.Lang = "tl"
+    #c.Lang = "tl"
     
     if save_bool:
         c.Store_csv = True
