@@ -13,7 +13,7 @@ well within the 70\%-90\% range of acceptable industry standards. The applicatio
 with a graph that shows the date the tweet was posted and the confidence of the model of the predicted sentiment of a specific tweet.
 
 Libraries required:
-twint
+̶t̶w̶i̶n̶t̶ Does not work as of March 22, 2023 due to Elon Musk Twitter's new anti scraping. Needs to be changed soon
 pandas
 numpy
 nltk
@@ -23,4 +23,4 @@ streamlit
 Use pip install
 run using "streamlit run search_twitter.py"
 
-Online version https://roncalderon-moodtwt-search-twitter-vjp6s7.streamlit.app/
+̶O̶n̶l̶i̶n̶e̶ ̶v̶e̶r̶s̶i̶o̶n̶ ̶h̶t̶t̶p̶s̶:̶/̶/̶r̶o̶n̶c̶a̶l̶d̶e̶r̶o̶n̶-̶m̶o̶o̶d̶t̶w̶t̶-̶s̶e̶a̶r̶c̶h̶-̶t̶w̶i̶t̶t̶e̶r̶-̶v̶j̶p̶6̶s̶7̶.̶s̶t̶r̶e̶a̶m̶l̶i̶t̶.̶a̶p̶p̶/̶ Does not work as of March 22, 2023 due to Elon Musk Twitter's new anti scraping.
