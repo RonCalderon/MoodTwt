@@ -1,6 +1,7 @@
 # MoodTwt
 
-By Ron Cedric P. Calderon and Concepcion L. Khan
+Ron Cedric P. Calderon 
+Adviser: Concepcion L. Khan
 
 MoodTwt: An Application for Sentiment Analysis of Bilingual Tagalog-English Trending Twitter Topics Using Softmax Regression
 
@@ -23,4 +24,7 @@ streamlit
 Use pip install
 run using "streamlit run search_twitter.py"
 
-̶O̶n̶l̶i̶n̶e̶ ̶v̶e̶r̶s̶i̶o̶n̶ ̶h̶t̶t̶p̶s̶:̶/̶/̶r̶o̶n̶c̶a̶l̶d̶e̶r̶o̶n̶-̶m̶o̶o̶d̶t̶w̶t̶-̶s̶e̶a̶r̶c̶h̶-̶t̶w̶i̶t̶t̶e̶r̶-̶v̶j̶p̶6̶s̶7̶.̶s̶t̶r̶e̶a̶m̶l̶i̶t̶.̶a̶p̶p̶/̶ Does not work as of March 22, 2023 due to Elon Musk Twitter's new anti scraping.
+Presentation: https://drive.google.com/file/d/1aVS1u9TKLlJI2KJCqp2KwJtN9ZjK6_6Q/view?usp=share_link
+
+̶O̶n̶l̶i̶n̶e̶ ̶v̶e̶r̶s̶i̶o̶n̶ ̶h̶t̶t̶p̶s̶:̶/̶/̶r̶o̶n̶c̶a̶l̶d̶e̶r̶o̶n̶-̶m̶o̶o̶d̶t̶w̶t̶-̶s̶e̶a̶r̶c̶h̶-̶t̶w̶i̶t̶t̶e̶r̶-̶v̶j̶p̶6̶s̶7̶.̶s̶t̶r̶e̶a̶m̶l̶i̶t̶.̶a̶p̶p̶/̶ 
+NOTE: Does not work as of March 22, 2023 due to Elon Musk Twitter's new anti scraping.
